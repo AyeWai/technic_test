@@ -1,0 +1,79 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello GetXmlValueController!{% endblock %}
+
+{% block body %}
+<main>
+			<div class="py-5 text-center mt-5">
+				<h1>Contact</h1>
+				<p class="lead">Cette page me permet de vous recontacter ultérieurement et d'écrire le nom des généreux donateurs dans le livre d'or.</p>
+			</div>
+
+			<div class="row g-3">
+				<div class="col-md-8 col-lg-7">
+					<!-- <h4 class="mb-3">Ajouter un compte</h4> -->
+					<form class="needs-validation" method ="POST" action="{{path('create_contact')}}">
+						<div class="row g-3 mb-5">
+							<div class="col-sm-6">
+								<label for="firstName" class="form-label">Prénom</label>
+								<input type="text" class="form-control" id="firstName" name="firstName" placeholder="" value="">
+								<div class="invalid-feedback">
+									Un prénom valide est requis.
+								</div>
+							</div>
+
+							<div class="col-sm-6">
+								<label for="lastName" class="form-label">Nom</label>
+								<input type="text" class="form-control" id="lastName" name="lastName" placeholder="" value="">
+								<div class="invalid-feedback">
+									Un nom valide est requis.
+								</div>
+							</div>
+
+							<!-- <div class="col-12">
+								<label for="contactname" class="form-label">Mail</label>
+								<div class="input-group">
+									<span class="input-group-text">@</span>
+									<input type="text" class="form-control" id="contactname" placeholder="Pseudonyme" required>
+									<div class="invalid-feedback">
+										Un pseudonyme est requis.
+									</div>
+								</div>
+							</div> -->
+
+							<!-- <div class="col-12">
+								<label for="contactname" class="form-label">Mot de passe</label>
+								<div class="input-group">
+									<input type="password" class="form-control" id="password" placeholder="Votre mot de passe" required>
+									<div class="invalid-feedback">
+										Un mot de passe est requis.
+									</div>
+								</div>
+							</div> -->
+
+							<div class="col-12">
+								<label for="email" class="form-label">Date de naisance
+									<!-- <span class="text-muted">(Optional)</span> -->
+								</label>
+								<input type="date" class="form-control" id="date" name="datedenaissance" required>
+								<div class="invalid-feedback">
+									Une date de naissance correcte est requise
+								</div>
+							</div>
+						</div>
+
+
+
+
+
+						<!-- <button class="w-100 btn btn-primary btn-lg" type="submit" href="{{path('register_submit',)}}">Confirmer</button> -->
+						<button class="w-50 btn btn-primary btn-lg mx-auto d-block" type="submit" href="{{path('register_submit',)}}">Confirmer</button> 
+					</form>
+
+				</div>
+			</div>
+
+
+		</main>
+
+{% endblock %}
